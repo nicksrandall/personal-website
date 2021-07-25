@@ -1,5 +1,6 @@
 <script>
 	import Image from 'svelte-image';
+	import { VisuallyHidden } from 'accessible-svelte';
 	import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte';
 	import FaTwitterSquare from 'svelte-icons/fa/FaTwitterSquare.svelte';
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
@@ -26,6 +27,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
+				<VisuallyHidden text="Github" />
 				<FaGithubSquare />
 			</a>
 			<a
@@ -34,6 +36,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
+				<VisuallyHidden text="Twitter" />
 				<FaTwitterSquare />
 			</a>
 			<a
@@ -42,6 +45,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
+				<VisuallyHidden text="LinkedIn" />
 				<FaLinkedin />
 			</a>
 		</div>
@@ -65,9 +69,6 @@
 		height: 100vh;
 		filter: brightness(50%);
 		z-index: -1;
-	}
-	.bg {
-		object-fit: cover;
 	}
 
 	.content {

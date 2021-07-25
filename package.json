@@ -29,6 +29,7 @@
   },
   "type": "module",
   "dependencies": {
+    "accessible-svelte": "^0.0.4",
     "blurhash": "^1.1.3",
     "svelte-icons": "^2.1.0"
   }
