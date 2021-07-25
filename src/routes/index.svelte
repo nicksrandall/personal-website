@@ -7,7 +7,14 @@
 
 <div class="container">
 	<div class="background">
-		<Image src="images/nick.jpg" />
+		<Image
+			src="images/nick.jpg"
+			class="bg"
+			alt="Image of Nick looking out from edge of cliff"
+			wrapperClass="wrapper"
+			height="100%"
+			width="100%"
+		/>
 	</div>
 	<div class="content">
 		<h1>Hi, I'm Nick Randall</h1>
@@ -59,8 +66,13 @@
 		filter: brightness(50%);
 		z-index: -1;
 	}
+	.bg {
+		object-fit: cover;
+	}
 
 	.content {
+		width: 100%;
+		padding: 24px;
 		position: fixed;
 		top: 50%;
 		left: 50%;
@@ -71,8 +83,15 @@
 	}
 
 	h1 {
+		line-height: 1;
 		font-size: 56px;
-		margin-bottom: 0px;
+		margin-bottom: 16px;
+	}
+
+	@media (max-width: 800px) {
+		h1 {
+			font-size: 48px;
+		}
 	}
 
 	.icons {
@@ -87,5 +106,25 @@
 	}
 	.icon:hover {
 		color: #38b2ac;
+	}
+
+	.background :global(.bg),
+	.background :global(.placeholder) {
+		object-fit: cover;
+	}
+
+	.background :global(.wrapper) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.background :global(div),
+	.background :global(div + div) {
+		height: 100%;
 	}
 </style>
